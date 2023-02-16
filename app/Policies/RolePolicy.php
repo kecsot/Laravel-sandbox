@@ -14,7 +14,6 @@ class RolePolicy extends AbstractSimplePolicy
 
     public function hasPermission(User $user, ?Model $model = null): Response|bool
     {
-        dump("rp");
         return $user->can(Permissions::CAN_ADMINISTRATE_ROLES->getName());
     }
 
